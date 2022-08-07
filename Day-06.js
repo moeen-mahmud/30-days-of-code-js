@@ -2,23 +2,22 @@ function processData(input) {
 	let message = input.split("\n");
 	let processedNumber = parseInt(message[0]);
 
-	for(let i=0; i<processedNumber; i++) {
+	for (let i = 0; i < processedNumber; i++) {
 		let processedMessage = message[i + 1];
 		let processedMessageLen = processedMessage.length;
 		let messageArray = processedMessage.split("");
 		let evenString = "";
 		let oddString = "";
-		for(let j = 0; j < processedMessageLen; j++) {
-			if(j % 2 === 0) {
+		for (let j = 0; j < processedMessageLen; j++) {
+			if (j % 2 === 0) {
 				evenString += messageArray[j]
-			}else {
+			} else {
 				oddString += messageArray[j]
 			}
 		}
 		console.log(evenString + " " + oddString);
 	}
 }
-
 
 
 let string = "2 " +
