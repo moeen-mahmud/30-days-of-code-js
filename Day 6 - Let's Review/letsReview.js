@@ -1,34 +1,31 @@
-'use strict';
+function processData(input) {
+	let message = input.split("\n");
+	let processedNumber = parseInt(message[0]);
 
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
-
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', function (inputStdin) {
-	inputString += inputStdin;
-});
-
-process.stdin.on('end', function () {
-	inputString = inputString.split('\n');
-
-	main();
-});
-
-function readLine() {
-	return inputString[currentLine++];
-}
-
-function multiplicationTable(input) {
-	let result = 1;
-	for (let i = 1; i <= 10; i++) {
-		result = input * i;
-		console.log(`${input} x ${i} = ${result}`);
+	for (let i = 0; i < processedNumber; i++) {
+		let processedMessage = message[i + 1];
+		let processedMessageLen = processedMessage.length;
+		let messageArray = processedMessage.split("");
+		let evenString = "";
+		let oddString = "";
+		for (let j = 0; j < processedMessageLen; j++) {
+			if (j % 2 === 0) {
+				evenString += messageArray[j]
+			} else {
+				oddString += messageArray[j]
+			}
+		}
+		console.log(evenString + " " + oddString);
 	}
 }
 
-function main() {
-	const n = parseInt(readLine().trim(), 10);
-	multiplicationTable(n);
-}
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+_input = "";
+process.stdin.on("data", function (input) {
+	_input += input;
+});
+
+process.stdin.on("end", function () {
+	processData(_input);
+});
