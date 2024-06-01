@@ -29,7 +29,7 @@ class Person {
         ", " +
         this.firstName +
         "\nID: " +
-        this.idNumber
+        this.idNumber,
     );
   }
 }
@@ -58,7 +58,7 @@ class Student extends Person {
   calculate() {
     const totalScore = this.scores.reduce(
       (previous, current) => previous + current,
-      0
+      0,
     );
     const average = totalScore / this.scores.length;
 
