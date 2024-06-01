@@ -13,7 +13,7 @@ function processData(input) {
 
   query.forEach((item) => {
     console.log(
-      phonebook.get(item) ? `${item}=${phonebook.get(item)}` : "Not found"
+      phonebook.get(item) ? `${item}=${phonebook.get(item)}` : "Not found",
     );
   });
 }

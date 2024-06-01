@@ -57,14 +57,14 @@ class MyBook extends Book {
   display() {
     console.log(
       "Title:" +
-        " " +
-        this.title +
-        "\nAuthor:" +
-        " " +
-        this.author +
-        "\nPrice:" +
-        " " +
-        this.price
+      " " +
+      this.title +
+      "\nAuthor:" +
+      " " +
+      this.author +
+      "\nPrice:" +
+      " " +
+      this.price
     );
   }
 
@@ -79,3 +79,4 @@ function main() {
   let book = new MyBook(title, author, price);
   book.display();
 }
+>>>>>>> main
